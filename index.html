@@ -1,130 +1,229 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Đảng ủy phường Tân Phú</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f5f5;
-        }
+  <meta charset="UTF-8">
+  <title>Thời Sự Việt Nam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Header */
-        header {
-            background-color: #c40000;
-            color: white;
-            padding: 15px;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
 
-        header h1 {
-            margin: 0;
-        }
+    /* HEADER */
+    header {
+      background: #b30000;
+      color: white;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    .top-bar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: bold;
-        }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
 
-        /* Layout */
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 20px auto;
-            gap: 20px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 500;
+    }
 
-        /* Main news */
-        .main-news {
-            flex: 3;
-            background: white;
-            padding: 20px;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        .main-news img {
-            width: 100%;
-            height: auto;
-        }
+    /* MAIN LAYOUT */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      padding: 0 16px;
+    }
 
-        .main-news h2 {
-            margin-top: 15px;
-        }
+    /* FEATURED NEWS */
+    .featured {
+      background: white;
+      padding: 20px;
+    }
 
-        /* Sidebar */
-        .sidebar {
-            flex: 1;
-            background: white;
-            padding: 20px;
-        }
+    .featured img {
+      width: 100%;
+      border-radius: 4px;
+    }
 
-        .sidebar h3 {
-            border-bottom: 2px solid #c40000;
-            padding-bottom: 5px;
-        }
+    .featured h1 {
+      font-size: 28px;
+      margin: 15px 0;
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+    .featured p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-        .sidebar li {
-            margin-bottom: 10px;
-        }
+    /* LIST NEWS */
+    .news-list {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
 
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
+    .news-item {
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-item img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .news-item h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .news-item span {
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* SIDEBAR */
+    aside {
+      background: white;
+      padding: 20px;
+    }
+
+    aside h3 {
+      border-left: 4px solid #b30000;
+      padding-left: 8px;
+      margin-bottom: 15px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside li {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Đảng ủy phường Tân Phú</h1>
+  <div class="top-bar">
+    <div class="logo">THỜI SỰ VIỆT NAM</div>
     <nav>
-        <a href="#">Trang chủ</a>
-        <a href="#">Thời sự</a>
-        <a href="#">Kinh tế</a>
-        <a href="#">Xã hội</a>
-        <a href="#">Pháp luật</a>
+      <a href="#">Thời sự</a>
+      <a href="#">Kinh tế</a>
+      <a href="#">Xã hội</a>
+      <a href="#">Pháp luật</a>
+      <a href="#">Thế giới</a>
     </nav>
+  </div>
 </header>
 
-<div class="container">
-    <!-- Tin chính -->
-    <div class="main-news">
-        <img src="https://via.placeholder.com/800x400" alt="Tin thời sự">
-        <h2>Quốc hội thảo luận về phát triển kinh tế năm 2025</h2>
-        <p>
-            Sáng nay, Quốc hội tiếp tục phiên họp thảo luận về các giải pháp
-            phát triển kinh tế - xã hội, tập trung vào ổn định vĩ mô và đời sống người dân.
-        </p>
+<main class="container">
+
+  <!-- CỘT TRÁI -->
+  <section>
+    <div class="featured">
+      <img src="https://via.placeholder.com/800x420" alt="Tin chính">
+      <h1>Quốc hội thảo luận chiến lược phát triển kinh tế năm 2025</h1>
+      <p>
+        Quốc hội tiếp tục phiên họp quan trọng, tập trung vào các giải pháp
+        ổn định kinh tế vĩ mô, cải thiện đời sống người dân và thúc đẩy tăng trưởng bền vững.
+      </p>
     </div>
 
-    <!-- Tin bên phải -->
-    <div class="sidebar">
-        <h3>Tin nổi bật</h3>
-        <ul>
-            <li>✔️ Giá xăng dầu điều chỉnh mới</li>
-            <li>✔️ Thời tiết miền Bắc chuyển lạnh</li>
-            <li>✔️ Giao thông dịp lễ được siết chặt</li>
-            <li>✔️ Cảnh báo lừa đảo công nghệ cao</li>
-        </ul>
+    <div class="news-list">
+      <div class="news-item">
+        <img src="https://via.placeholder.com/300x200">
+        <div>
+          <h3>Giá xăng dầu điều chỉnh tăng nhẹ</h3>
+          <span>Kinh tế • 2 giờ trước</span>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <img src="https://via.placeholder.com/300x200">
+        <div>
+          <h3>Miền Bắc chuẩn bị đón đợt không khí lạnh mới</h3>
+          <span>Xã hội • 3 giờ trước</span>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <img src="https://via.placeholder.com/300x200">
+        <div>
+          <h3>Siết chặt an toàn giao thông dịp lễ</h3>
+          <span>Pháp luật • 5 giờ trước</span>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <h3>TIN NỔI BẬT</h3>
+    <ul>
+      <li>✔️ Cảnh báo lừa đảo công nghệ cao</li>
+      <li>✔️ Điều chỉnh lịch học một số địa phương</li>
+      <li>✔️ Giá vàng biến động mạnh</li>
+      <li>✔️ Thời tiết cực đoan gia tăng</li>
+    </ul>
+  </aside>
+
+</main>
 
 <footer>
-    © 2025 - Trang Thời Sự Việt Nam | Demo học lập trình web
+  © 2025 Thời Sự Việt Nam • Trang demo học lập trình web
 </footer>
 
 </body>
