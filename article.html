@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết bài viết</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    h1 { font-size: 28px; }
+    .meta { color: #777; font-size: 14px; }
+    img { width: 100%; margin: 20px 0; }
+    p { line-height: 1.7; }
+    a { color: #b30000; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <a href="index.html">← Quay về trang chủ</a>
+  <h1 id="title"></h1>
+  <div class="meta" id="meta"></div>
+  <img id="image">
+  <p id="content"></p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("title").innerText = params.get("title");
+  document.getElementById("meta").innerText = params.get("meta");
+  document.getElementById("image").src = params.get("img");
+  document.getElementById("content").innerText = params.get("content");
+</script>
+
+</body>
+</html>
