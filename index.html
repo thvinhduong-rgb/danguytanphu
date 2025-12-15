@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảng ủy phường Tân Phú</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background-color: #c40000;
+            color: white;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        /* Main news */
+        .main-news {
+            flex: 3;
+            background: white;
+            padding: 20px;
+        }
+
+        .main-news img {
+            width: 100%;
+            height: auto;
+        }
+
+        .main-news h2 {
+            margin-top: 15px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+        }
+
+        .sidebar h3 {
+            border-bottom: 2px solid #c40000;
+            padding-bottom: 5px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Đảng ủy phường Tân Phú</h1>
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Thời sự</a>
+        <a href="#">Kinh tế</a>
+        <a href="#">Xã hội</a>
+        <a href="#">Pháp luật</a>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Tin chính -->
+    <div class="main-news">
+        <img src="https://via.placeholder.com/800x400" alt="Tin thời sự">
+        <h2>Quốc hội thảo luận về phát triển kinh tế năm 2025</h2>
+        <p>
+            Sáng nay, Quốc hội tiếp tục phiên họp thảo luận về các giải pháp
+            phát triển kinh tế - xã hội, tập trung vào ổn định vĩ mô và đời sống người dân.
+        </p>
+    </div>
+
+    <!-- Tin bên phải -->
+    <div class="sidebar">
+        <h3>Tin nổi bật</h3>
+        <ul>
+            <li>✔️ Giá xăng dầu điều chỉnh mới</li>
+            <li>✔️ Thời tiết miền Bắc chuyển lạnh</li>
+            <li>✔️ Giao thông dịp lễ được siết chặt</li>
+            <li>✔️ Cảnh báo lừa đảo công nghệ cao</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    © 2025 - Trang Thời Sự Việt Nam | Demo học lập trình web
+</footer>
+
+</body>
+</html>
