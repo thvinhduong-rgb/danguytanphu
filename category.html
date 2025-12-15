@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chuyên mục</title>
+</head>
+<body>
+
+<h2 id="category"></h2>
+<ul>
+  <li><a href="#">Tin 1</a></li>
+  <li><a href="#">Tin 2</a></li>
+  <li><a href="#">Tin 3</a></li>
+</ul>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("category").innerText =
+    "Chuyên mục: " + params.get("name");
+</script>
+
+</body>
+</html>
